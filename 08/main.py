@@ -135,7 +135,7 @@ def main():
     global trees
 
     # import trees from file
-    import_trees("trees.txt")
+    import_trees("08/trees.txt")
 
     # calculate the number of visible trees
     calc_visible_trees()

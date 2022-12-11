@@ -1,6 +1,10 @@
 import os
 
 class Player:
+    """
+        A class to hold a player in a game of scissors, paper, rock.
+        Each player has a score and a move, which is represented by an integer that is equal to that move's score.
+    """
     def __init__(self):
         self.score = 0
         self.move = 0 # holds the player's current move, 1 = rock, 2 = paper, 3 = scissors
@@ -36,6 +40,9 @@ def load_strategy(filepath):
 
         Args:
             filepath (str): The filepath to the file to load.
+        
+        Returns:
+            list: A list containing the values of each line in the file, stripped of newlines and whitespace.
     """
     try:
         with open(filepath, "r") as f:

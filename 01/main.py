@@ -1,6 +1,11 @@
 import os
 
 class Elf:
+    """
+        A class to represent an elf that holds a number of food items.
+        The food items themselves are not stored, only the calorie total of all food items.
+        The add_food function lets us pass a string, int or float of a food's calorie count and it's added to the elf's total calorie count.
+    """
     def __init__(self):
         self.calorie_total = 0
     
@@ -14,10 +19,12 @@ class Elf:
 def load_food(filepath):
     """
         Load a list of food from a file, with each line containing the calories for a food item. A blank line separates each elf's inventory.
-        A list containing the values of each line (stripped of newlines and whitepsace) is returned.
 
         Args:
             filepath (str): The filepath to the file to load.
+        
+        Returns:
+            list: A list containing the values of each line in the file, stripped of newlines and whitespace.
     """
     try:
         with open(filepath, "r") as f:

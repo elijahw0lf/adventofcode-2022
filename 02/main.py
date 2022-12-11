@@ -1,8 +1,7 @@
 import os
 
 class Player:
-    def __init__(self, name):
-        self.name = name
+    def __init__(self):
         self.score = 0
         self.move = 0 # holds the player's current move, 1 = rock, 2 = paper, 3 = scissors
     
@@ -60,7 +59,7 @@ def play_game(strategy, mode):
 
 
     # create two players, allowing us to assign the player's move and their score
-    opponent, you = Player("opponent"), Player("you")
+    opponent, you = Player(), Player()
     
     # we place both players in a list so we can sort it by the player's move value, allowing us to find the winner without if statements
     # eg: if we know one player threw scissors (move=3) and the other threw rock (move=1), the player in index 0 threw rock and is the winner
